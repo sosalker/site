@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>Kekhub</title>
+</head>
+</html>
+
+<?php
+
+require_once "simple_html_dom.php";
+
+$html = file_get_html("codecademy.namecheap.com");
+foreach ($html->find("div") as $element) {
+    print_r($element);
+}
